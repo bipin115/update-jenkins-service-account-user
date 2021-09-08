@@ -8,8 +8,6 @@ There is a two-fold process that must be run in order to resolve this issue. Cha
 ````
 Note: You might check the /etc/init.d/jenkins script because this location contains two crucial variables: $JENKINS_CONFIG(=/etc/sysconfig/jenkins) and $JENKINS_USER. You might think that changing the JENKINS_USER variable would work, but this is actually not the correct way to rectify the issue.
 
-````
-````
 To change the service, open the /etc/sysconfig/jenkins (in Debian [Ubuntu] this file is created in /etc/default) and change the JENKINS_USER to the user you want. In this example, it's talenduser because that is the user that owns the product suite on this machine. Make sure that the user you are changing to actually exists in the system (you can check the user in the /etc/passwd file if you are unsure).
 $JENKINS_USER="talenduser"
 
